@@ -28,6 +28,7 @@
             echo "This is a application : ${{env.APP_NAME}} and version : ${{env.APP_VERSION}}";
             echo "$RUNNER_CONTEXT"
             echo "The database Password is ${{secrets.DB_PASSWORD}}"
+            echo "This event_name is ${{github.event_name}}"
           
 
     hello-job:
