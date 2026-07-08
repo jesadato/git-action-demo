@@ -15,7 +15,7 @@
       runs-on: ubuntu-latest
       steps:
         - name: Echo Github Variable
-
+          run : echo "Client sent status ${{github.event_name}}"
 
           
 
@@ -27,7 +27,7 @@
           
         - name: Retrieve client payload
           run : echo "Client sent status ${{github.event.client_payload.status}}"
-          run : echo "Client sent status ${{github.event_name}}"
+
           
     seccond-job:
       runs-on: windows-latest
