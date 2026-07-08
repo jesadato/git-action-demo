@@ -15,7 +15,10 @@
       runs-on: ubuntu-latest
       steps:
         - name: Echo Github Variable
-          run : echo "Client sent status ${{github.event_name}}"
+          run : |
+            echo "This job trigger by";
+            echo "This job trigger by";
+            echo "This job trigger by"
 
           
 
