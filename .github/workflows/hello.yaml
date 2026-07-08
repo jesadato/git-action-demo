@@ -1,13 +1,55 @@
   name: Hello World
+  env:
+    APP_NAME : "Hello World"
   on: 
     push:
       branches: [main]
+      paths-ignore:
+        - ".github/workflow/*"
     pull_request:
       branches: [main]
+      
+    repository_dispatch:
+      types: ["on-demand-test"]
+      
   jobs:
+    echo-vars:
+      env:
+        PACKAGE_PATH : '.'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Echo Github Variable
+          env:
+            APP_VERSION : "2.34.5"
+          run : |
+            echo "This job trigger by ${{github.event_name}}";
+            echo "This repository is ${{github.repository}}";
+            echo "This branch is ${{github.ref_name}}";
+            echo "This is a application : ${{env.APP_NAME}} and version : ${{env.APP_VERSION}}";
+            echo "$RUNNER_CONTEXT"
+            echo "The database Password is ${{secrets.DB_PASSWORD}}"
+            echo "This github.event.client_payload.status is ${{github.event.client_payload.status}}"
+          
+
     hello-job:
+      if: ${{github.event_name != 'push'}}
       runs-on: ubuntu-latest
       steps:
         - name: Run a one-line script
           run : echo "Hello Github Actions!"
+<<<<<<< HEAD
           ,,,
+=======
+          
+        - name: Retrieve client payload
+          run : echo "Client sent status ${{github.event.client_payload.status}}"
+
+          
+    seccond-job:
+      if: ${{github.event_name != 'push'}}
+      runs-on: windows-latest
+      needs: hello-job
+      steps:
+        - run: echo "This job is running on ${{runner.os}}"
+          if: ${{runner.os == 'linux'}}
+>>>>>>> 87f8211af0fcf571955367153029bef645575e31
