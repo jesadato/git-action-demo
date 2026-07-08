@@ -1,6 +1,6 @@
   name: Hello World
-        env:
-        PACKAGE_PATH : '.'
+  env:
+    APP_NAME : "Hello World"
   on: 
     push:
       branches: [main]
@@ -25,7 +25,7 @@
             echo "This job trigger by ${{github.event_name}}";
             echo "This repository is ${{github.repository}}";
             echo "This branch is ${{github.ref_name}}";
-            echo "This is a ${{env.APP_VERSION}} version  ${{env.APP_VERSION}} ";
+            echo "This is a ${{env.APP_VERSION}} version  ${{env.APP_NAME}} ";
             echo "$RUNNER_CONTEXT"
             echo "The database Password id ${{secrets.DB_PASSWORD}}"
           
