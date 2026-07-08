@@ -24,7 +24,7 @@
             echo "This repository is ${{github.repository}}";
             echo "This branch is ${{github.ref_name}}";
             echo "This is a ${{env.APP_VERSION}} version  ${{env.APP_VERSION}} ";
-
+            echo "$RUNNER_CONTEXT"
           
 
     hello-job:
