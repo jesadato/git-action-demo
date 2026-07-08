@@ -15,10 +15,9 @@
       runs-on: ubuntu-latest
       steps:
         - name: Echo Github Variable
-          run: |
-          echo "This job trigger by ${{github.envent_name}}";
-          echo "This repository is ${{github.}}";
-          echo "This branch is ${{github.ref_name}}";
+          run : echo "Hello Github Actions!";
+          
+
     hello-job:
       runs-on: ubuntu-latest
       steps:
