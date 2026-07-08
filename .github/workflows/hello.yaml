@@ -31,6 +31,7 @@
           
 
     hello-job:
+      if: ${{github.envent_name != 'on-demand-test'}}
       runs-on: ubuntu-latest
       steps:
         - name: Run a one-line script
@@ -41,7 +42,9 @@
 
           
     seccond-job:
+      if: ${{github.envent_name != 'on-demand-test'}}
       runs-on: windows-latest
       needs: hello-job
       steps:
         - run: echo "This job is running on ${{runner.os}}"
+          if: ${{runner.os == 'linux'}}
