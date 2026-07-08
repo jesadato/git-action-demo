@@ -16,7 +16,7 @@
       steps:
         - name: Echo Github Variable
           run : |
-            echo "This job trigger by ${{github.envent_name}}";
+            echo "This job trigger by ${{github.event_name}}";
             echo "This repository is ${{github.repository}}";
             echo "This branch is ${{github.ref_name}}";
 
