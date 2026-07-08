@@ -1,4 +1,6 @@
   name: Hello World
+        env:
+        PACKAGE_PATH : '.'
   on: 
     push:
       branches: [main]
@@ -25,6 +27,7 @@
             echo "This branch is ${{github.ref_name}}";
             echo "This is a ${{env.APP_VERSION}} version  ${{env.APP_VERSION}} ";
             echo "$RUNNER_CONTEXT"
+            echo "The database Password id ${{secrets.DB_PASSWORD}}"
           
 
     hello-job:
