@@ -1,8 +1,7 @@
 POST https://api.github.com/repos/jesadato/git-action-demo/dispatches
 Content-Type: application/json
 Accept: application/vnd.github+json
-Authorization: Bearer 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
-
+Authorization: Bearer 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
 {
   "event_type": "on-demand-test",
   "client_payload": {
