@@ -1,11 +1,11 @@
 POST https://api.github.com/repos/jesadato/git-action-demo/dispatches
 Content-Type: application/json
 Accept: application/vnd.github+json
-Authorization : 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
+Authorization: Bearer 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
 
 {
- "event-type": "after_render_cms",
- "client-playload" : {
-  "status": "compleled"
+ "event_type": "after_render_cms",
+ "client_playload" : {
+  "status": "completed"
  }
 }
