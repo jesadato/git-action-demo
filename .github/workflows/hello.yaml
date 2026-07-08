@@ -5,7 +5,7 @@
     push:
       branches: [main]
       paths-ignore:
-        - ".github/*"
+        - ".github/workflow/*"
     pull_request:
       branches: [main]
       
