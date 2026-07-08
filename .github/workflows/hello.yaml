@@ -25,9 +25,9 @@
             echo "This job trigger by ${{github.event_name}}";
             echo "This repository is ${{github.repository}}";
             echo "This branch is ${{github.ref_name}}";
-            echo "This is a ${{env.APP_VERSION}} version  ${{env.APP_NAME}} ";
+            echo "This is a application : ${{env.APP_NAME}} and version : ${{env.APP_VERSION}}";
             echo "$RUNNER_CONTEXT"
-            echo "The database Password id ${{secrets.DB_PASSWORD}}"
+            echo "The database Password is ${{secrets.DB_PASSWORD}}"
           
 
     hello-job:
