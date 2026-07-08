@@ -4,7 +4,7 @@ Accept: application/vnd.github+json
 Authorization: Bearer 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
 
 {
- "event_type": "after_render_cms",
+ "event_type": "on-demand-test",
  "client_playload" : {
   "status": "completed"
  }
