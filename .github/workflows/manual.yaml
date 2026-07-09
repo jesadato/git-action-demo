@@ -12,8 +12,7 @@ on:
         description: 'Run UI testing'
         required: true
         type: boolean
-        default: false
-        
+        default: false  
 jobs:
   build:
     runs-on: ubuntu-latest
