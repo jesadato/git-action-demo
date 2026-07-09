@@ -2,11 +2,11 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Target encironment'
+        description: 'Target Environment'
         required: true
         type: choice
         options:
-          - "staging"
+          - "Staging"
           - "Production"
       run_ui_tests:
         description: 'Run UI testing'
