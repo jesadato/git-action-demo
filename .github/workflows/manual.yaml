@@ -24,9 +24,4 @@ jobs:
           ref: ${{github.ref_name}}
       - name: List files in workspaces
         run: ls ${{github.workspace}}
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: UI Testing
-        if: ${{inputs.run_ui_tests}}
-        run: echo "Run UI testing tools in ${{inputs.environment}} environment"
+
