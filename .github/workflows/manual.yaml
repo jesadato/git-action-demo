@@ -31,4 +31,3 @@ jobs:
       - name: UI Testing
         if: ${{inputs.run_ui_tests}}
         run: echo "Run UI testing tools in ${{inputs.environment}} environment"
-    
