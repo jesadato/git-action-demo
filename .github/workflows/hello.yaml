@@ -37,13 +37,9 @@
       steps:
         - name: Run a one-line script
           run : echo "Hello Github Actions!"
-<<<<<<< HEAD
-          ,,,
-=======
           
         - name: Retrieve client payload
           run : echo "Client sent status ${{github.event.client_payload.status}}"
-
           
     seccond-job:
       if: ${{github.event_name != 'push'}}
@@ -52,4 +48,3 @@
       steps:
         - run: echo "This job is running on ${{runner.os}}"
           if: ${{runner.os == 'linux'}}
->>>>>>> 87f8211af0fcf571955367153029bef645575e31
